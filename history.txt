@@ -1,0 +1,26 @@
+   11  npm install webpack
+   12  npm install babel-loader webpack --save-dev
+   13  npm install babel-loader webpack --save-dev
+   19  npm install webpack
+   23  npm install babel-plugin-hello-world
+   28  npm install babel-plugin-hello-world
+   30  npm install babel
+   37  npm install --save-dev babel-loader babel-core
+   38  npm install babel-preset-env --save-dev
+   39  npm install -g babel
+   41  npm install babel
+   42  npm install babel-cli
+   43  npm install webpack --save
+   44  npm install webpack-dev-server --save
+   45  npm install react-dom --save
+   46  npm install react --save
+   47  npm install babel-core
+   48  npm install babel-loader
+   49  npm install babel-preset-react
+   50  npm install babel-preset-es2015
+   59  npm install webpack-dev-server
+   70  sudo npm install webpack-dev-server -g
+   74  npm install -g babel
+   75  sudo npm install -g babel
+   76  sudo npm install -g babel-cli
+   84  brew install watchman
