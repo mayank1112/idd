@@ -15,6 +15,10 @@ componentDidMount(){
 	console.log("did mount!") 
  }
 
+ componentWillReceiveProps(props) {
+ 	console.log("will receive props", props);
+ }
+
 shouldComponentUpdate(){
  	console.log("should update");
  	return true;
@@ -28,6 +32,10 @@ shouldComponentUpdate(){
  componentDidUpdate(){
  	console.log("did update");
  }
+
+componentWillUnmount() {
+console.log("will unmount")
+}
 
 
 showGraph(report,row) {
@@ -51,31 +59,30 @@ redirector() {
 		)
 }
 
-showData(row, report) {
-	if(row.value > 0)
-return (
-	<div>
-	      					<span>{row.label}</span>: <span className="holder" onClick={() => this.showGraph(report,row)}>{row.value}</span>
-	      				</div>
-	);
-else return (
-	<div>No Downtimes reported!</div>
-	);
-}
-
-
 
 
 
    render() {
       return (
       	<div className="wrapper">
-	      	<div className="container"> <span className="page-title">Application Status (Last 30 days) Last Updated: {this.state.updated}</span>
+	      	<div className="container"> <span className="page-title">Application Status (Last 30 days) <span className="good">Last Updated: <b>{this.state.updated}</b></span></span>
 	      		{this.props.reports.map(report => 
 	      		<div className="row">
 	      			<div className="team-title">{report.team}</div>
 	      				{report.data.map(row => 
-	      				this.showData(row, report)
+	      				
+
+	      				(row.value > 0)?
+  (
+	<div>
+	      					<span>{row.label}</span>: <span className="holder" onClick={() => this.showGraph(report,row)}>{row.value}</span>
+	      				</div>
+	): (
+	<div>No Downtimes reported!</div>
+	)
+
+
+
 	      				)}
 	      		</div>
 	      		)}
