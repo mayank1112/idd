@@ -4,8 +4,11 @@ import Home from './Home.jsx';
 import Login from './Login.jsx'; 
 import Graph from './Graph.jsx'; 
 import {BrowserRouter, Route, Switch } from 'react-router-dom';
+
+
 require('./../css/style.less');
 
+ 
 let params = {"title": "Infosys DevOps Dashboard",
 "slogan": "DevOps Dashboard",
 "logo": "/img/print-logo.png",
@@ -115,6 +118,6 @@ reports={params.reports}
 	}
 }
 
-ReactDOM.render(<Root />, document.getElementById('app'));
+ReactDOM.render(<Root />, document.getElementById('root'));
 
  

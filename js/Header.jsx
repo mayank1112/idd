@@ -5,13 +5,14 @@ class Header extends React.Component {
 
 
 	showLogin() {
-		if(this.props.user.name)
-			return (
-<div className="greeting">Welcome, {this.props.user.name} | <Link to={"/"}>Logout</Link>!</div>
-)
-		else return (
-			<div className="greeting">Welcome, Guest!</div>
-)
+		
+			if(this.props.user.name)
+					return (
+						<div className="greeting">Welcome, {this.props.user.name} | <Link to={"/"}>Logout</Link>!</div>
+			)
+					else return (
+						<div className="greeting">Welcome, Guest!</div>
+			)
 
 	}
 

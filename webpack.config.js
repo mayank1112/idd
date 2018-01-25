@@ -1,11 +1,13 @@
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const WriteFilePlugin = require('write-file-webpack-plugin');
+const HtmlPlugin = require('html-plugin');
 
  
 var config = {
    entry: './js/index.js',
    output: {
-      path:'/',
-      filename: '[name].js',
+      path:      '/Users/mayankmahajan/t/dist',
+      filename: 'index.js',
    },
    devServer: {
       inline: true,
@@ -40,7 +42,24 @@ var config = {
    },
    plugins: [
     
-    new ExtractTextPlugin('[name].css')
+    new ExtractTextPlugin('style.css'),
+        new WriteFilePlugin(),
+         new HtmlPlugin({
+      template: 'app/index.html'
+    }),
+
+
+
+
+new webpack.DefinePlugin({
+  'process.env.NODE_ENV': JSON.stringify('production')
+}),
+new webpack.optimize.UglifyJsPlugin()
+
+
+
+
+
   ]
 }
 module.exports = config;

@@ -2,12 +2,15 @@ import React from 'react';
 import { Redirect } from 'react-router'
 
 class Main extends React.Component {
-  
-componentWillMount(){
-	console.log("willmount!")
-	this.setState({"updated": (new Date()).toString()});
-	this.setState({"path": ""});
 
+constructor(props)
+{
+	console.log("in constructor")
+super();
+}
+componentWillMount(){
+console.log("will mount")
+this.state={}
 //	history.push("/home/2");
  }
 
@@ -15,22 +18,22 @@ componentDidMount(){
 	console.log("did mount!") 
  }
 
- componentWillReceiveProps(props) {
- 	console.log("will receive props", props);
+ componentWillReceiveProps(a, b) {
+ 	console.log("will receive props", a, b);
  }
 
-shouldComponentUpdate(){
- 	console.log("should update");
+shouldComponentUpdate(a,b){
+ 	console.log("should update", a, b);
  	return true;
  }
 
- componentWillUpdate(){
- 	console.log("will update");
+ componentWillUpdate(a,b){
+ 	console.log("will update", a, b);
  }
  
 
- componentDidUpdate(){
- 	console.log("did update");
+ componentDidUpdate(a,b){
+ 	console.log("did update", a, b);
  }
 
 componentWillUnmount() {
@@ -39,8 +42,9 @@ console.log("will unmount")
 
 
 showGraph(report,row) {
-	this.setState({"updated": (new Date()).toString()});
-
+	this.setState({"aa":1});
+	//return;
+ 
 	fetch("/json/graph.json")
 
 	.then(r => r.json())
@@ -52,11 +56,12 @@ showGraph(report,row) {
 
 }
 
-redirector() {
+redirector() { 
 	if(this.state.path)
 	return (
 		<Redirect to={this.state.path} />
 		)
+
 }
 
 
@@ -65,7 +70,7 @@ redirector() {
    render() {
       return (
       	<div className="wrapper">
-	      	<div className="container"> <span className="page-title">Application Status (Last 30 days) <span className="good">Last Updated: <b>{this.state.updated}</b></span></span>
+	      	<div className="container"> <span className="page-title">Application Status (Last 30 days) <span className="good">Last Updated: <b>{this.props.updated}</b></span></span>
 	      		{this.props.reports.map(report => 
 	      		<div className="row">
 	      			<div className="team-title">{report.team}</div>

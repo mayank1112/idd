@@ -1,0 +1,121 @@
+body{
+	margin:0;
+	font-family: tahoma;
+}
+
+h1 {margin:0;
+padding:0}
+
+.logo {float: left}
+
+.clear {clear: both} 
+
+.slogan {
+	color: gray;  
+	font-weight: normal;
+	font-size: 20px;
+	float: left; 
+	border-left: 1px dotted silver;
+	padding-left: 10px; 
+	margin-left: 10px;
+	margin-top: 10px;
+} 
+
+.good, .bad {
+	font-size:11px
+
+}  
+input.bad {
+	border: 1px solid red;
+	background: yellow;
+}
+
+.good {
+	color: green
+}
+span.bad {
+	color: red;
+}
+
+.row {padding:8px}
+.row:nth-of-type(odd){
+	background: #e6f8ff;
+}
+.row:nth-of-type(even){
+	background: #f9f9f9;	
+}
+
+.container {
+	margin:10px;
+	box-shadow: 1px 1px 2px 2px silver;
+	padding: 15px;
+	border-radius: 15px;
+}
+.page-title{
+	font-size: 32px;
+	margin: 5px; 
+}
+.team-title {
+	font-size: 28px; 
+	color: #007de6;
+	text-shadow: 1px 1px 1px #fff;
+}
+
+.header-container{
+	padding: 30px 50px;
+}
+
+header { 
+	background: linear-gradient(gray, black, black);   
+	border-bottom: 2px solid #dbdbdb;
+	}
+
+.greeting {
+	padding: 8px 12px; 
+	background: linear-gradient( gray, #fff);   
+ 	text-align:right;
+	font-size:12px;
+	text-shadow: 1px 1px 1px #fff;
+	}
+
+
+.holder, .buttons a { 
+	display:inline-block;
+	background: linear-gradient(#fff, #dfefff);
+	text-align: center;
+	color: #007def;
+	cursor: pointer;
+	box-shadow: 1px 1px 1px 1px silver;
+	text-shadow: 1px 1px 1px #fff;
+	text-decoration: none;
+	padding: 4px;
+	font-size:14px;
+}
+
+a {
+	color: #007def;
+}
+
+a:hover{
+	text-decoration: none;
+}
+.holder:hover, .buttons a:hover { 
+text-decoration: underline;
+	background: linear-gradient(to top, #fff, #dfefff);
+}
+
+.wrapper {
+	padding: 30px;
+	background: linear-gradient(silver, #fff, #fff, #fff, #fff, #fff, #fff);
+}
+
+footer {
+	border-top: 1px solid silver;
+	border-bottom: 1px solid silver;
+	padding:50px;  
+	color: gray;
+	text-align:center; 
+	margin-top: 30px;
+	background: linear-gradient(to top right, silver, #fff);
+	text-shadow: 1px 1px 1px #fff 
+}
